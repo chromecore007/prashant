@@ -334,23 +334,18 @@ section {
   text-align: center;
 }
 
-
 .section-title {
   font-size: 7rem;
   margin-bottom: 6rem;
 }
 
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 4.2rem; 
-  }
-}
-
 .section-title span {
   color: #b74b4b;
   text-shadow: 0 0 10px #b74b4b;
+  
 }
 
+/* TIMELINE */
 
 .timeline {
   position: relative;
@@ -358,7 +353,7 @@ section {
   margin: auto;
 }
 
-
+/* 🔥 CENTER LINE (LOWER Z-INDEX) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -369,8 +364,10 @@ section {
   left: 50%;
   transform: translateX(-50%);
   box-shadow: 0 0 20px #b74b4b;
+  z-index: 0; /* IMPORTANT */
 }
 
+/* ITEM */
 
 .timeline-item {
   position: relative;
@@ -378,64 +375,90 @@ section {
   padding: 2rem 3rem;
 }
 
-
 .timeline-item.left {
   left: 0;
-  padding-right: 60px;
   text-align: right;
+  padding-right: 60px;
 }
 
 .timeline-item.right {
   left: 50%;
-  padding-left: 60px;
   text-align: left;
+  padding-left: 60px;
 }
 
+/* 🔥 LOGO POINT (ABOVE LINE) */
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  top: 10px;
+  z-index: 2;
+
+  /* ✅ PERFECT LOGO FIT */
+  background-size: contain;     /* full logo dikhe */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;       /* black bg for clean circle */
+
+  border: 3px solid #b74b4b;
+  box-shadow: 0 0 20px #b74b4b;
+
+  overflow: hidden;
+}
+
+/* Individual logos */
+
+.timeline-item:nth-child(1)::before {
+  right: -32px;
+  background-image: url('./assets/csjm.png');
+}
+
+.timeline-item:nth-child(2)::before {
+  left: -32px;
+  background-image: url('./assets/ssd.png');
+}
+
+.timeline-item:nth-child(3)::before {
+  right: -32px;
+  background-image: url('./assets/ssmk.png');
+}
+
+/* CARD */
 
 .content {
-  background: rgba(20, 20, 20, 0.9);
+  background: linear-gradient(145deg, #111, #1a1a1a);
   padding: 2.5rem;
-  border-radius: 1.2rem;
-  box-shadow: 0 0 20px rgba(183, 75, 75, 0.3);
-  transition: 0.3s;
-  display: inline-block;
+  border-radius: 1.5rem;
+  box-shadow: 
+    0 0 20px rgba(183, 75, 75, 0.3),
+    inset 0 0 10px rgba(255,255,255,0.05);
+
+  transition: 0.4s ease;
   width: 480px;
   height: 250px;
+
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+  position: relative;
+  z-index: 1;
 }
 
 .content:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 0 10px #b74b4b;
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 
+    0 0 25px #b74b4b,
+    0 0 50px rgba(183, 75, 75, 0.3);
 }
 
-
-.timeline-item.left::before {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  background: #b74b4b;
-  border-radius: 50%;
-  top: 30px;
-  right: -9px; 
-  box-shadow: 0 0 20px #b74b4b;
-}
-
-.timeline-item.right::before {
-  content: '';
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  background: #b74b4b;
-  border-radius: 50%;
-  top: 30px;
-  left: -9px;
-  box-shadow: 0 0 20px #b74b4b;
-}
+/* TEXT */
 
 .content h3 {
   color: #b74b4b;
-  font-size: 2.3rem;
+  font-size: 2.2rem;
 }
 
 .content h4 {
@@ -452,6 +475,7 @@ section {
   color: #ddd;
 }
 
+/* 📱 RESPONSIVE */
 
 @media (max-width: 768px) {
 
@@ -470,12 +494,18 @@ section {
     left: 0;
   }
 
-
+  /* 🔥 MAIN FIX */
   .timeline-item.left::before,
   .timeline-item.right::before {
-    left: 20px;     
+    left: 20px;
     right: auto;
+
     transform: translateX(-50%);
+    
+    width: 55px;
+    height: 55px;
+
+    top: 5px; /* thoda adjust for perfect center */
   }
 
   .content {
@@ -483,6 +513,11 @@ section {
     height: auto;
     padding: 2rem;
   }
+
+  .section-title {
+  font-size: 4.2rem;
+  margin-bottom: 6rem;
+}
 }
 
 /* Projects Section */
