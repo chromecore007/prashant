@@ -450,8 +450,8 @@ section {
 .content:hover {
   transform: translateY(-10px) scale(1.04);
   box-shadow: 
-    0 0 25px #b74b4b,
-    0 0 50px rgba(183, 75, 75, 0.3);
+    0 0 10px #b74b4b,
+    0 0 15px rgba(183, 75, 75, 0.3);
 }
 
 /* TEXT */
