@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         try {
-            const res = await fetch("https://portbackend-fe4u.onrender.com/contact", {
+            const res = await fetch("https://portbackend-sg6b.onrender.com/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData)
