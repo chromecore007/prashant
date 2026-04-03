@@ -1,0 +1,74 @@
+#preloader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.name-loader {
+  text-align: center;
+}
+
+#loading-text {
+  font-size: 3rem;
+  color: #b74b4b;
+  letter-spacing: 8px;
+  text-shadow: 0 0 10px #b74b4b;
+}
+
+
+.progress-bar {
+  width: 200px;
+  height: 4px;
+  background: #333;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background: #b74b4b;
+  transition: width 0.2s linear;
+}
+
+
+#preloader.fade-out {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+
+.fly {
+  display: inline-block;
+  animation: flyUp 0.6s forwards;
+}
+
+@keyframes flyUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  #loading-text {
+      text-shadow: 0 0 15px #b74b4b, 0 0 30px #b74b4b;
+    font-size: 5rem;       
+    letter-spacing: 12px;   
+  }
+
+  .progress-bar {
+    width: 350px;           
+    height: 6px;
+  }
+}
