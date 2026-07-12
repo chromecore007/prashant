@@ -8,51 +8,39 @@ function typeAndLoad() {
   if (index < text.length) {
     loadingText.innerHTML += text.charAt(index);
     index++;
-
-  
-    let percent = (index / text.length) * 100;
-    progressBar.style.width = percent + "%";
-
-    setTimeout(typeAndLoad, 200); 
+    progressBar.style.width = ((index / text.length) * 100) + "%";
+    setTimeout(typeAndLoad, 100);
   } else {
-    // ensure 100%
     progressBar.style.width = "100%";
-
-    setTimeout(() => {
-      flyLetters();
-    }, 300);
+    setTimeout(flyLetters, 400);
   }
 }
-
 
 function flyLetters() {
   const letters = loadingText.innerText.split("");
   loadingText.innerHTML = "";
 
-  letters.forEach((letter) => {
+  letters.forEach((letter, i) => {
     const span = document.createElement("span");
     span.innerText = letter;
+    if (i === 0 || i === letters.length - 1) {
+      span.classList.add("letter-accent");
+    }
     loadingText.appendChild(span);
   });
 
   const spans = loadingText.querySelectorAll("span");
-
   spans.forEach((span, i) => {
     setTimeout(() => {
       span.classList.add("fly");
-    }, (spans.length - i) * 100);
+    }, (spans.length - i) * 60);
   });
 
   setTimeout(() => {
-    document.getElementById("preloader").classList.add("fade-out");
-
-    setTimeout(() => {
-      document.getElementById("preloader").style.display = "none";
-    }, 800);
-  }, 1000);
+    const preloader = document.getElementById("preloader");
+    preloader.classList.add("fade-out");
+    setTimeout(() => { preloader.style.display = "none"; }, 600);
+  }, 600);
 }
 
-
-window.addEventListener("load", () => {
-  typeAndLoad();
-});
+window.addEventListener("load", typeAndLoad);

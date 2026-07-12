@@ -4,321 +4,484 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="shortcut icon" type="image/x-icon" href="photo2.png" />
-  <meta name="description" content="Portfolio of Prashant Thakur - Web Developer, UI/UX Designer, and Trainer.">
+  <meta name="description" content="Prashant Thakur - Full Stack Developer & UI/UX Enthusiast">
   <meta name="author" content="Prashant Thakur">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="preloader.css">
   <title>Welcome to my Portfolio</title>
 </head>
 
 <body>
-  <!-- 🔄 Preloader -->
-<div id="preloader">
-  <div class="name-loader">
-    <h1 id="loading-text"></h1>
-    <div class="progress-bar">
-      <div class="progress"></div>
-    </div>
-  </div>
-</div>
 
-  <header>
- <h1 class="logo">Portfolio</h1>
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-  <nav id="nav-menu" class="hidden">
-    <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#education">Education</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
 
-     <!-- main Page section -->
-<section class="home" id="home">
+  <!-- Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
 
-  <!-- 🎥 Background Video (ADD THIS) -->
-  <video autoplay muted loop playsinline class="bg-video">
-    <source src="./assets/background.mp4" type="video/mp4">
-  </video>
+  <!-- Noise Overlay -->
+  <div class="noise-overlay"></div>
 
-  <div class="home-img">
-    <img src="./assets/newphoto.jpeg" alt="Profile Picture" />
-  </div>
-
-  <div class="home-content">
-    <h1>Hi, It's me <span style="color: rgb(160, 71, 71);">PRASHANT THAKUR</span></h1>
-    <h3>I'm a <span id="typed-text"></span></h3>
-
-    <p>
-      I'm a Web Designer and experienced trainer.
-      <br />
-      Expertise is to create website design, frontend design, and many more...
-    </p>
-
-    <div class="social-icons">
-      <a href="https://www.linkedin.com/in/prashant-kumar-641b1828a" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/chromecore007" target="_blank"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.instagram.com/twinsbrotherz/profilecard" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://t.me/prashantthakur0128" target="_blank"><i class="fa-brands fa-telegram"></i></a>
-      <a href="https://www.snapchat.com/add/singh_pras143" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
-      <a href="https://youtube.com/@beastprashant7246" target="_blank"><i class="fa-brands fa-youtube"></i></a>
-      <a href="https://linktr.ee/prashantthakur0128" target="_blank"><i class="fa-solid fa-link"></i></a>
-      <a href="https://drive.google.com/file/d/1-U9FiTTSvRbENiAOo7i3d3wHEuxgvVge/view" target="_blank"><i class="fa-solid fa-file"></i>
-</a>
-    </div>
-
-    <a href="#about" class="btn">More About Me</a>
-  </div>
-
-</section>
-
-  <!-- About section  -->
-
- <section id="about" class="about">
-  <div class="img-about">
-    <img src="./assets/myPhoto.jpeg" alt="About me image" />
-  </div>
-
-  <div class="about-content">
-    <h3><span class="spans">LET ME INTRODUCE MYSELF</span></h3>
-    <h3>About Me</h3>
-    <h2>A Story Of Good........</h2>
-    <p>
-      Hello Everyone!<br />
-      I am Prashant Kumar<br />
-      I am a passionate learner currently pursuing my B.Tech in Computer Science and Artificial Intelligence Engineering.
-      With a keen interest in exploring and acquiring new skills, I actively seek out opportunities to gain diverse experiences. I enjoy visualizing and implementing my learning in real-life situations, which allows me to constantly challenge myself and grow.
-      My goal is to leverage my skills and knowledge to make a positive impact in the field of Software Engineering and contribute to society.
-    </p>
-    <div class="btn-box">
-      <a href="#" class="btn">Read More..</a>
-    </div>
-  </div>
-</section>
-
-<section id="skills" class="skills">
-  <h1 class="tech">TECHNICAL AND PROFESSIONAL</h1>
-  <h2 class="section-title"><span>My</span> Skills</h2>
-  <div class="skills-container">
-    <div class="skill-card">
-      <h3>Frontend</h3>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React.js</li>
-      </ul>
-    </div>
-
-       <div class="skill-card">
-      <h3>Framework</h3>
-      <ul>
-        <li>Tailwind CSS</li>
-        <li>Bootstarp</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Backend</h3>
-      <ul>
-        <li>Node.js</li>
-        <li>Express.js</li>
-        <li>MongoDB</li>
-        <li>SQL</li>
-      </ul>
-    </div>
-
-     <div class="skill-card">
-      <h3>Programming Languages</h3>
-      <ul>
-        <li>C/C++</li>
-        <li>Python</li>
-        <li>JavaScript</li>
-      </ul>
-    </div>
-
-    <div class="skill-card">
-      <h3>Tools & Platforms</h3>
-      <ul>
-        <li>Git & GitHub</li>
-        <li>VS Code</li>
-        <li>Figma</li>
-        <li>Vercel,Linux</li>
-      </ul>
-    </div>
-    <div class="skill-card">
-      <h3>Core Subject</h3>
-      <ul>
-        <li>DSA</li>
-        <li>OS</li>
-        <li>DBMS</li>
-        <li>Computer Network</li>
-        <li>OOPs</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- education Section  -->
-<section id="education" class="education">
-  <h2 class="section-title"><span>My</span> Education</h2>
-
-  <div class="timeline">
-
-    <div class="timeline-item left">
-      <div class="content">
-        <h3>B.Tech - CSE</h3>
-        <h4>CSJM University, Kanpur</h4>
-        <span>2023 - 2027</span>
-        <p>Focused on Artificial Intelligence & Software Development.</p>
-        <b>Grade: A</b>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="loader-content">
+      <div class="loader-ring-anim">
+        <div class="loader-ring-inner"></div>
+      </div>
+      <h1 id="loading-text"></h1>
+      <div class="progress-bar">
+        <div class="progress"></div>
       </div>
     </div>
-
-    <div class="timeline-item right">
-      <div class="content">
-        <h3>12th - PCM</h3>
-        <h4>SSDD Inter College, Aligarh</h4>
-        <span>2022</span>
-        <p>Strong foundation in Physics, Chemistry & Mathematics.</p>
-        <b>Grade: A</b>
-      </div>
-    </div>
-
-    <div class="timeline-item left">
-      <div class="content">
-        <h3>10th - Science</h3>
-        <h4>SSMK Inter College, Aligarh</h4>
-        <span>2020</span>
-        <p>Built core concepts in Science and Mathematics.</p>
-        <b>Grade: A</b>
-      </div>
-    </div>
-
   </div>
-</section>
 
-<!-- Project section -->
-
-<section id="projects" class="projects">
-  <h2 class="section-title">My <span>Projects</span></h2>
-  <div class="projects-container">
-    <div class="project-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWht_6uaseoHbbFDVoy-1w8eTd5HJqw7jSjA&s" alt="Project 1" />
-      <h3>Weather Web</h3>
-      <p>A responsive Weather web Page website built using HTML ,CSS and JS mimicking the homepage layout and design.</p>
-      <div class="btn-group">
-        <a href="https://weather-1fay.vercel.app/" class="btn btn-primary" target="_blank">View Demo</a>
-        <a href="https://github.com/Kumarprashantthakur/weather" class="btn btn-secondary" target="_blank">Source Code</a>
+  <!-- Header -->
+  <header id="header">
+    <div class="header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-bracket">&lt;</span>PT<span class="logo-bracket">/&gt;</span>
+      </a>
+      <nav id="nav-menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-right">
+        <a href="https://drive.google.com/file/d/1-U9FiTTSvRbENiAOo7i3d3wHEuxgvVge/view" target="_blank" class="resume-btn">
+          <i class="fa-solid fa-download"></i> Resume
+        </a>
+        <div class="menu-toggle" id="menu-toggle">
+          <span></span><span></span><span></span>
+        </div>
       </div>
     </div>
-    <div class="project-card">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAACxCAMAAAAh3/JWAAAAn1BMVEXv7+85OTnCj1rv7/Dy9fjKoXjq5eHNqoY1NTX09PTAi1OoqKgmJiYsLCxeXl7z9vj7+/vUtpu/hkrr6+vFmWowMDAgICBVVVXn3tbg4ODTs5UpKSmGhobg0cO8vLzAiVAZGRlFRUXZwazEk2HcyLbh1MfMpH7n4NnaxLHExMS+hUaTk5Pb29s+Pj6bm5tqamq8fzwJCQl3d3fQ0NCxsbFXFXyXAAAIMUlEQVR4nO2bCVejOhTHaRNog3VSllakwzCytaPO8z31+3+2lw0IEKuOBe2Z+ztnRsgC5G9y782iZQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJwMhCkeB/Zcgj67eR8AUSfxKnskqkUWIfzZbfxDEC3t6hA5Yz0/cMo4zCwy1vPHBDt27GDEej6y0OnhryCYFnlxfp0H0STcU3E17nuwV438ipODaLagaJKPpmU+xWtOCC4WdLJ3Rfl5ua0opNN1dlxO95v4OAjlwZS/SxyXf/46Ijnh5xwHHQ6kNTi6i9Ha0DqdQXXCgzxT3gs5iOR14wZNfa3t5GJ2w1hev9qqE4HC1r2iKGkoIwfVTUOlSBoMPtb+feHFcZY4tJuHaFBmXuyxHNyrhbNEvpH8+iFocgYJfcjFbsbYTiUOKr1WHBzfpgo/9X23SoQ6iOY+S/p3UBcdeIbrur5vl3oIg6PK93kGe0rIghtdHxTYSpyr7YrxX5OzvhEJP1/8WHJxycVZTSUOjvftl2PPneu4aR7xhuCQ3/n9qlGetmX9qjVdKPbbB7l+6OgjBeFKBuLk21I0tclZX4mEzYsfO7k4tn7TE4dxy3uEURxc+l0l5406dtrL6UxLcCZN8tcXx7LxoOewseDz4SJbFpjFQZHUJk3lP1ZSBXi4krf8AfIhbt4ZV0kmetLXF8dZDMRJiz0jSkLRxjTD5p6Ti2a7RYCQ492KoiKEwQehWmpHFrYcz68f0oAiaebOQpz2RorjR8JtExwLdWyjONhLZWfBfEZGI1H0VtSUvc/j/gshnAh1XC0uRlH8cXEmCXdM4tRRWiBazIaEQZxAjqm9uGElCqFVRRGRV3YdddOFErypegJx1tc/Li5+XK8/2PjXOCYOEiMnN9kclAgJ4sZLy7Kpw8p2nsGkuOUuPWt/z28RJ1jxq8sLXmv9fcNvZkErzt1mdXm52z3cj9t7joojBkRoGlZY9QetairMFbaknW47SlBxMj3UfIM4W36108RZtuLMvolYkJVcPY2qjlEcdSd8deqZxJEdZR60CcJ5uQuqfupP5SvTWiMG4tR5A3Fe6Dmz5axmXNtsNMhyVTwS7fcd07ByhNUNtZmTk8puJk2Od2Tq3RNnd3+tCN4qDiuzkQJtHsa0OwZx3GrBqHIxPm4TbDDIaC/trz5lEFLmOBPRwOHIemhPnNnPBtVg6zVxNr+/f7+SQ2v7dFI5uhjE4dELQ1yFpQhdBuII190ZPGqgKXEK0aUQxlRyZFgNeFWczSNZr9d34vrybkSrYxSnDfxjxzi3qsXRBo8SBylxRLVDHiry+EVv9X5xpKEhv4X5+TaxOK6cmAvf7BfGudWLPQdpPQdnzRxLL3oicdaPIvn3eNoYbY5XcA6VMjqmINAgzvxPxVk2vK/n/CPH1Yj+yuyteHCOcCnbxkyH2SDPNYOsZg21QRYxH8748pD7ijgrUvNWV67EkTe7icWpg0Aai9tkKI4VSCm08V67chk6e3w6S6LD4VAItY6J02S8Vxzhr3b3J9ekbdOxCFlEgayhhgi5ni3UqLIx3oufYrGPTTsZTj8qPJk4n9pzVNQb06E4TadqqqoEYklD3sbORnF4vY+KI23O5pPEIYmcPxjEUR3FbitLuxsgOetqF3DQWOKo5JvT6qGDjsytLGqrmMWwZCE9t59gefaAerX7InL11G12HZy+Y3v7sNrc8cmBQRyuGbn5jDgnjeR5I0sudvn72iDzSLc5jlTIxT++AI8ILaTb58s7VBR2c7lbQ5SFfqc4ROoxu2ah8A81B2/EWT5YnxYhy7nVwlZO2CYqznEXGoXsVnN/Ue73iVxR94WPahaXY5YTFWpBWX/NG5ZJ1zJvuXl4vFnNeuKwaSdLlpfbUZd0bO3hdYTczq14x6kjZJUu8D0azGVhvhivZJQjSS0iz/mmlcriujVvQcnh1d0H5ae5PE0Yrc/Km4Bx1Fk5Pb4146bt1kwnPcPI0bet+Ip67bpw5veK+3Gnf0qjdnyZdNmIsuyL83vTZI0ZH/Mvjfq7D5oy/kKbeHaUEN5o0e7dsb6kPafMu7t63e1QOzgqzqXIfFopCXZXwujIlUB+tfl+t1X9ZjfuSmBtHZU4bBTIEeXOc3tRKJeDQ32g8fGVimGCo0XKZwj+7dxz9PYjWoRi74uNrHkcdTfSnUpO5sm3DZ9QbZuM9RVP2Oxk7v3Dz+1ut13dkfsVT15ycfjV6p/1xeYny9o+Xo+8A0FC7YY2iOOxbYhH+xC1YEP2SVGUDu3uh3PnbkUsJ4kC2jtJQJszKGtJm9VNWAe/np+frLVFmmR5RSxCnp6ffwVj7z5YpNCXNDs7k51DKP16SP334ukUxNz4MAdZQYgNpc3f9vLm1DTHdFgQsze1bSywHU35ug/CvM6Ex/TwwXtzx/kK4NKe7sBkMt27TgNNQrnlPTr4YPcPen15cJQnE3w0tqr4rMYUh7ul2C7JKPrUa0OYOl4YnZ02HISdOIyTyDkFmv9mlyJpX2ZVlZBpzsmPACbRIV6chLZ/kH0uUmJveKz0fBDhHMHDUPjdYO2YIYrygD1SRNtnK81Joc0BVWboQZMuuJA75Uyb8Nz+gmh8+Eof4gFf+HrZv45ARMG4sGFMDUFcFVrYE/6l0vmAFw6bKFRnGfCNDjkk4i8jP/s7viZRlp3fJGoikCV3sAAjx85L/vWAvQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Jz4H1Git/KNV7VJAAAAAElFTkSuQmCC" alt="Project 2" />
-      <h3>BlogHub</h3>
-     <p>I developed a BlogHub web application using the MERN stack (MongoDB, Express.js, React, and Node.js) that allows users to create, read, update, and delete blog posts with secure authentication and a responsive user interface.</p>
-      <div class="btn-group">
-        <a href="https://blog-hub-ashen.vercel.app/" class="btn btn-primary" target="_blank">View Demo</a>
-        <a href="https://github.com/chromecore007/BlogHub" class="btn btn-secondary" target="_blank">Source Code</a>
-      </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="home" id="home">
+    <div class="hero-bg">
+      <div class="aurora aurora-1"></div>
+      <div class="aurora aurora-2"></div>
+      <div class="aurora aurora-3"></div>
+      <div class="grid-pattern"></div>
     </div>
 
-    <div class="project-card">
-      <img src="https://img.freepik.com/free-vector/retro-quiz-show-neon-sign-illustration_1308-181006.jpg"/>
-      <h3>Quiesy</h3>
-      <p>Built Quiesy, a scalable Django-based online quiz platform with authentication, analytics, real-time scoring, and deployment.</p>
-      <div class="btn-group">
-        <a href="https://quiesy.onrender.com" class="btn btn-primary" target="_blank">View Demo</a>
-        <a href="https://github.com/Kumarprashantthakur/Quiesy" class="btn btn-secondary" target="_blank">Source Code</a>
+    <div class="home-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span> Open to opportunities
       </div>
-    </div>
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text">Prashant<br>Thakur</span>
+      </h1>
+      <h2 class="hero-subtitle">
+        I'm a <span id="typed-text" class="typed-text"></span><span class="cursor-blink">|</span>
+      </h2>
+      <p class="hero-desc">
+        Full Stack Developer & CS undergrad passionate about building scalable web apps and crafting clean, user-friendly interfaces.
+      </p>
 
-
-     <div class="project-card">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4as4bF7gGDBvoYejMSV4zpUEpeNFhkCP94A&s" />
-      <h3>Yapester- Chat Web</h3>
-      <p>Built Yapester, a full-stack React chat application with real-time messaging, authentication, and scalable backend architecture.</p>
-      <div class="btn-group">
-        <a href="https://chat-black-gamma-80.vercel.app/" class="btn btn-primary" target="_blank">View Demo</a>
-        <a href="https://github.com/Kumarprashantthakur/yapester" class="btn btn-secondary" target="_blank">Source Code</a>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-glow">
+          <span>View Projects</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn btn-glass">
+          <span>Get in Touch</span>
+        </a>
       </div>
-    </div>
 
-
-  
-  </div>
-</section>
-
-  
-
-<!-- Contact section -->
-
-<section id="contact" class="contact">
-  <h2 class="section-title">Contact <span>Me</span></h2>
-  <div class="contact-container">
-    <form action="https://portbackend-sg6b.onrender.com/contact" method="POST" class="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn">Send Message</button>
-    </form>
-    <div class="contact-info">
-      <h3>Let's connect</h3>
-      <p><strong>Email:</strong> prashantthakur0128@gmail.com</p>
-      <p><strong>Instagram:</strong> @twinsbrotherz</p>
       <div class="social-icons">
-    <a href="https://www.linkedin.com/in/prashant-kumar-641b1828a" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-<a href="https://github.com/chromecore007" target="_blank"><i class="fa-brands fa-github"></i></a>
-     <a href="https://linktr.ee/prashantthakur0128" target="_blank"><i class="fa-solid fa-link"></i></a>
-       
+        <a href="https://www.linkedin.com/in/prashant-kumar-641b1828a" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/chromecore007" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/twinsbrotherz/profilecard" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://t.me/prashantthakur0128" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+        <a href="https://youtube.com/@beastprashant7246" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- Footer Section -->
-
-<footer>
-  <div class="footer-content">
-    <h3>Prashant Thakur</h3>
-    <p>Thanks for visiting my portfolio! Let's connect.</p>
-    <div class="footer-socials">
-<a href="https://www.linkedin.com/in/prashant-kumar-641b1828a" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-<a href="https://github.com/chromecore007" target="_blank"><i class="fa-brands fa-github"></i></a>
-<a href="https://www.instagram.com/twinsbrotherz/profilecard" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-<a href="https://t.me/prashantthakur0128" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+    <div class="home-img">
+      <div class="img-wrapper" data-tilt>
+        <div class="img-glow"></div>
+        <div class="img-ring"></div>
+        <img src="./assets/newphoto.jpeg" alt="Prashant Thakur" />
+      </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <p>&copy; 2025 Prashant Thakur | All Rights Reserved.</p>
-  </div>
-</footer>
+  </section>
 
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">01</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-img-wrapper" data-tilt>
+            <img src="./assets/myPhoto.jpeg" alt="Prashant Thakur" />
+            <div class="about-img-border"></div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item glass-card">
+              <span class="stat-number">4+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item glass-card">
+              <span class="stat-number">9+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-item glass-card">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-card glass-card">
+            <h3 class="about-greeting">Hey there! <span class="wave">&#x1F44B;</span></h3>
+            <p>
+              I'm <strong>Prashant Kumar</strong>, a passionate B.Tech student in Computer Science & AI Engineering.
+              I love building things for the web - from sleek frontends to robust backends.
+            </p>
+            <p>
+              When I'm not coding, you'll find me exploring new technologies, contributing to open source,
+              and continuously pushing myself to grow as a developer. My goal is to build products that make a real difference.
+            </p>
+            <div class="about-tags">
+              <span class="tag">Full Stack Dev</span>
+              <span class="tag">MERN Stack</span>
+              <span class="tag">Problem Solver</span>
+              <span class="tag">Open Source</span>
+              <span class="tag">Quick Learner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">02</span>
+        <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card glass-card skill-card-lg">
+          <div class="skill-icon-wrap"><i class="fa-solid fa-code"></i></div>
+          <h3>Frontend</h3>
+          <div class="skill-list">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React.js</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-icon-wrap"><i class="fa-solid fa-palette"></i></div>
+          <h3>Frameworks</h3>
+          <div class="skill-list">
+            <span>Tailwind CSS</span><span>Bootstrap</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-icon-wrap"><i class="fa-solid fa-server"></i></div>
+          <h3>Backend</h3>
+          <div class="skill-list">
+            <span>Node.js</span><span>Express.js</span><span>MongoDB</span><span>SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-icon-wrap"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>Languages</h3>
+          <div class="skill-list">
+            <span>C/C++</span><span>Python</span><span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card">
+          <div class="skill-icon-wrap"><i class="fa-solid fa-wrench"></i></div>
+          <h3>Tools</h3>
+          <div class="skill-list">
+            <span>Git/GitHub</span><span>VS Code</span><span>Figma</span><span>Vercel</span><span>Linux</span>
+          </div>
+        </div>
+
+        <div class="skill-card glass-card skill-card-lg">
+          <div class="skill-icon-wrap"><i class="fa-solid fa-brain"></i></div>
+          <h3>Core Concepts</h3>
+          <div class="skill-list">
+            <span>DSA</span><span>OS</span><span>DBMS</span><span>Computer Networks</span><span>OOPs</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">03</span>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="edu-timeline">
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-card glass-card">
+            <div class="edu-top">
+              <div class="edu-logo"><img src="./assets/csjm.png" alt="CSJM" /></div>
+              <div class="edu-badges">
+                <span class="edu-date">2023 - 2027</span>
+                <span class="edu-grade">Grade: A</span>
+              </div>
+            </div>
+            <h3>B.Tech CSE (AI)</h3>
+            <h4>CSJM University, Kanpur</h4>
+            <p>Focused on Artificial Intelligence & Software Development</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-card glass-card">
+            <div class="edu-top">
+              <div class="edu-logo"><img src="./assets/ssd.png" alt="SSDD" /></div>
+              <div class="edu-badges">
+                <span class="edu-date">2022</span>
+                <span class="edu-grade">Grade: A</span>
+              </div>
+            </div>
+            <h3>12th - PCM</h3>
+            <h4>S S D D Inter College, Aligarh</h4>
+            <p>Strong foundation in Physics, Chemistry & Mathematics</p>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-card glass-card">
+            <div class="edu-top">
+              <div class="edu-logo"><img src="./assets/ssmk.png" alt="SSMK" /></div>
+              <div class="edu-badges">
+                <span class="edu-date">2020</span>
+                <span class="edu-grade">Grade: A</span>
+              </div>
+            </div>
+            <h3>10th - Science</h3>
+            <h4>S S M K Inter College, Aligarh</h4>
+            <p>Built core concepts in Science and Mathematics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">04</span>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="projects-grid">
+        <div class="project-card glass-card" data-tilt-card>
+          <div class="project-thumb">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWht_6uaseoHbbFDVoy-1w8eTd5HJqw7jSjA&s" alt="Weather Web" />
+            <div class="project-overlay">
+              <a href="https://weather-1fay.vercel.app/" target="_blank" class="proj-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Kumarprashantthakur/weather" target="_blank" class="proj-btn"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <h3>Weather Web</h3>
+            <p>Responsive weather application with real-time data and clean UI design.</p>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" data-tilt-card>
+          <div class="project-thumb">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh2l0B1_-9We-KRIZ1X-3CPxIzC_7YMv40kzuze7uhaw&s=10" alt="BlogHub" />
+            <div class="project-overlay">
+              <a href="https://blog-hub-ashen.vercel.app/" target="_blank" class="proj-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/chromecore007/BlogHub" target="_blank" class="proj-btn"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>MongoDB</span><span>Express</span><span>React</span><span>Node</span>
+            </div>
+            <h3>BlogHub</h3>
+            <p>Full-stack MERN blog platform with secure auth, CRUD operations & responsive UI.</p>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" data-tilt-card>
+          <div class="project-thumb">
+            <img src="https://img.freepik.com/free-vector/retro-quiz-show-neon-sign-illustration_1308-181006.jpg" alt="Quiesy" />
+            <div class="project-overlay">
+              <a href="https://quiesy.onrender.com" target="_blank" class="proj-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Kumarprashantthakur/Quiesy" target="_blank" class="proj-btn"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>Django</span><span>Python</span><span>SQL</span>
+            </div>
+            <h3>Quiesy</h3>
+            <p>Scalable Django quiz platform with auth, analytics, real-time scoring & deployment.</p>
+          </div>
+        </div>
+
+        <div class="project-card glass-card" data-tilt-card>
+          <div class="project-thumb">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXG64_OBza_5-V0-JwoIpPv0cZxA52F_gB3mxr7q2H6g&s=10" alt="Yapester" />
+            <div class="project-overlay">
+              <a href="https://chat-black-gamma-80.vercel.app/" target="_blank" class="proj-btn"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+              <a href="https://github.com/Kumarprashantthakur/yapester" target="_blank" class="proj-btn"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>Socket.io</span>
+            </div>
+            <h3>Yapester Chat</h3>
+            <p>Real-time React chat app with authentication and scalable backend architecture.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">05</span>
+        <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-left">
+          <h3>Let's work <span class="gradient-text">together</span>.</h3>
+          <p>Have a project in mind or just want to chat? Feel free to reach out. I'm always open to new opportunities and collaborations.</p>
+
+          <div class="contact-items">
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <span>Email</span>
+                <a href="mailto:prashantthakur0128@gmail.com">prashantthakur0128@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-brands fa-instagram"></i></div>
+              <div>
+                <span>Instagram</span>
+                <a href="https://www.instagram.com/twinsbrotherz/profilecard" target="_blank">@twinsbrotherz</a>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <span>Location</span>
+                <p>India</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/prashant-kumar-641b1828a" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/chromecore007" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://t.me/prashantthakur0128" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://linktr.ee/prashantthakur0128" target="_blank"><i class="fa-solid fa-link"></i></a>
+          </div>
+        </div>
+
+        <form action="https://portbackend-sg6b.onrender.com/contact" method="POST" class="contact-form glass-card">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me something..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-glow btn-block">
+            <span>Send Message</span>
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-top">
+          <a href="#home" class="footer-logo">
+            <span class="logo-bracket">&lt;</span>PT<span class="logo-bracket">/&gt;</span>
+          </a>
+          <p>Building the web, one pixel at a time.</p>
+        </div>
+        <div class="footer-nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-socials">
+          <a href="https://www.linkedin.com/in/prashant-kumar-641b1828a" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/chromecore007" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/twinsbrotherz/profilecard" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me/prashantthakur0128" target="_blank"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://youtube.com/@beastprashant7246" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Prashant Thakur. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- Custom Alert -->
-<div id="customAlert" class="custom-alert">
-  <span id="alertMessage"></span>
-  <button onclick="closeAlert()">✖</button>
-</div>
+  <div id="customAlert" class="custom-alert">
+    <span id="alertMessage"></span>
+    <button onclick="closeAlert()"><i class="fa-solid fa-xmark"></i></button>
+  </div>
 
-
-<script src="script.js"></script>
-<script src="preloader.js"></script>
+  <script src="script.js"></script>
+  <script src="preloader.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
