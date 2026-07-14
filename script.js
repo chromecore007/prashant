@@ -6,6 +6,35 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // ============================================================
+  // 0. THEME TOGGLE
+  // ============================================================
+  const themeToggle = document.getElementById("theme-toggle");
+  const themeIcon = themeToggle ? themeToggle.querySelector("i") : null;
+  const rootEl = document.documentElement;
+
+  function setThemeIcon() {
+    if (!themeIcon) return;
+    const isDark = rootEl.getAttribute("data-theme") !== "light";
+    themeIcon.className = isDark ? "fa-solid fa-sun" : "fa-solid fa-moon";
+  }
+
+  setThemeIcon();
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const current = rootEl.getAttribute("data-theme");
+      const next = current === "light" ? "dark" : "light";
+
+      rootEl.classList.add("theme-transitioning");
+      rootEl.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      setThemeIcon();
+
+      setTimeout(() => { rootEl.classList.remove("theme-transitioning"); }, 450);
+    });
+  }
+
+  // ============================================================
   // 1. PARTICLE CANVAS (lightweight, GPU-friendly)
   // ============================================================
   const canvas = document.getElementById("particle-canvas");

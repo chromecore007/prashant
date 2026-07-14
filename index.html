@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
   <meta charset="UTF-8" />
@@ -14,6 +14,14 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="preloader.css">
   <title>Welcome to my Portfolio</title>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('data-theme', saved);
+      }
+    })();
+  </script>
 </head>
 
 <body>
@@ -57,6 +65,9 @@
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-right">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun"></i>
+        </button>
         <a href="https://drive.google.com/file/d/1-U9FiTTSvRbENiAOo7i3d3wHEuxgvVge/view" target="_blank" class="resume-btn">
           <i class="fa-solid fa-download"></i> Resume
         </a>
