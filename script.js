@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // 7. SCROLL REVEAL (Staggered)
   // ============================================================
   const revealElements = document.querySelectorAll(
-    ".skill-card, .project-card, .edu-item, .about-card, .about-img-wrapper, .stat-item, .contact-left, .contact-form, .section-header"
+    ".skill-card, .project-card, .edu-item, .exp-item, .about-card, .about-img-wrapper, .stat-item, .contact-left, .contact-form, .section-header"
   );
 
   const revealObserver = new IntersectionObserver((entries) => {
@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const parent = entry.target.parentElement;
         const siblings = Array.from(parent.children).filter(c =>
           c.classList.contains("skill-card") || c.classList.contains("project-card") ||
-          c.classList.contains("edu-item") || c.classList.contains("stat-item")
+          c.classList.contains("edu-item") || c.classList.contains("exp-item") || c.classList.contains("stat-item")
         );
         const idx = siblings.indexOf(entry.target);
         const delay = idx >= 0 ? idx * 80 : 0;
@@ -257,6 +257,27 @@ document.addEventListener("DOMContentLoaded", function () {
     el.classList.add("reveal");
     revealObserver.observe(el);
   });
+
+  // ============================================================
+  // 7b. EXPERIENCE TIMELINE SCROLL ANIMATION
+  // ============================================================
+  const expLineFill = document.querySelector('.exp-line-fill');
+  const expTimeline = document.querySelector('.exp-timeline');
+
+  if (expLineFill && expTimeline) {
+    function updateExpTimeline() {
+      const timelineRect = expTimeline.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      const startOffset = windowHeight * 0.8;
+      const scrolled = startOffset - timelineRect.top;
+      const totalScrollable = timelineRect.height + (windowHeight * 0.2);
+      const progress = Math.min(Math.max(scrolled / totalScrollable, 0), 1);
+      expLineFill.style.height = (progress * timelineRect.height) + 'px';
+    }
+
+    window.addEventListener('scroll', updateExpTimeline, { passive: true });
+    updateExpTimeline();
+  }
 
   // ============================================================
   // 8. 3D TILT on project cards and hero image
