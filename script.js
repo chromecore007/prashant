@@ -354,6 +354,13 @@ document.addEventListener("DOMContentLoaded", function () {
     form.addEventListener("submit", async function (e) {
       e.preventDefault();
 
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalHTML = submitBtn.innerHTML;
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add("btn-loading");
+      submitBtn.innerHTML = '<i class="fa-solid fa-spinner"></i><span>Sending...</span>';
+
       const formData = {
         name: form.name.value.trim(),
         email: form.email.value.trim(),
@@ -377,6 +384,10 @@ document.addEventListener("DOMContentLoaded", function () {
       } catch (err) {
         console.error("Error:", err);
         showAlert("Error connecting to server", "error");
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove("btn-loading");
+        submitBtn.innerHTML = originalHTML;
       }
     });
   }

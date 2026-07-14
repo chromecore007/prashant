@@ -1296,6 +1296,23 @@ section { padding: 10rem 6%; position: relative; }
 }
 
 /* ============================================================
+   BUTTON LOADING STATE
+   ============================================================ */
+.btn-loading {
+  pointer-events: none;
+  opacity: 0.85;
+  min-width: 18rem;
+}
+
+.btn-loading i {
+  animation: btnSpin 0.8s linear infinite;
+}
+
+@keyframes btnSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 footer {
